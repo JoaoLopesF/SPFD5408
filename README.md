@@ -32,12 +32,14 @@ Restart the IDE
 
 If you download any code that uses Adafruit Libraries, please verify it:
 
-- Pinout XM XP, must be:
+—-  Pinout XM XP, must be:
 
 	#define YP A1  // must be an analog pin, use "An" notation!
 	#define XM A2  // must be an analog pin, use "An" notation!
 	#define YM 7   // can be a digital pin
 	#define XP 6   // can be a digital pin
+
+	(please verify it, if only a blank screen or noise is showed or touch doesnt works)
 
 —- Calibrate before run 
 
@@ -49,6 +51,8 @@ If you download any code that uses Adafruit Libraries, please verify it:
 	#define TS_MINY 120
 	#define TS_MAXX 920
 	#define TS_MAXY 940
+	
+	(please verify it if the point of touch is not accurate)
 
 ————————
 
