@@ -42,31 +42,31 @@ If you download any code that uses Adafruit Libraries, please verify it:
 
 - Pinout XM XP, must be:
 
-#define YP A1  // must be an analog pin, use "An" notation!
-#define XM A2  // must be an analog pin, use "An" notation!
-#define YM 7   // can be a digital pin
-#define XP 6   // can be a digital pin
+\#define YP A1  // must be an analog pin, use "An" notation!
+\#define XM A2  // must be an analog pin, use "An" notation!
+\#define YM 7   // can be a digital pin
+\#define XP 6   // can be a digital pin
 
 —- Calibrate before run 
 Exists one sketch written for my, to help in calibration of touch
 See it in examples folder
 Run it and change this parameters:
 
-#define TS_MINX 150
-#define TS_MINY 120
-#define TS_MAXX 920
-#define TS_MAXY 940
+\#define TS_MINX 150
+\#define TS_MINY 120
+\#define TS_MAXX 920
+\#define TS_MAXY 940
 
 ————————
 
 All changes in Adafruit code is marked with:
 
 
-  // ### SPFD5408 change -- Begin
+  // \#\#\# SPFD5408 change -- Begin
 
   (change)
 
-  // ### SPFD5408 change -- End
+  // \#\#\# SPFD5408 change -- End
 
 
 ——————
