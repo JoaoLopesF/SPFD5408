@@ -1,17 +1,14 @@
 # SPFD5408
 Adafruit Libraries changed to works in TFT 2.4 shields with the SPFD5408 controler
 
-***********************
-*** Library: SPFD5408
-*** Author : Joao Lopes - joaolopesf@gmail.com
-*** Versions:
-*** 0.9 - July 2015 - first beta version
-*** Observations:
-*** This library is a Adafruit’s libraries for TFT,
-*** ported to works with SPFD5408 controller of cheap TFT 2.4 Shield
-*** License:
-*** MIT license, all text above must be included in any redistribution
-***********************
+#######################
+### Library: SPFD5408
+### Author : Joao Lopes - joaolopesf@gmail.com
+### Versions:
+### 0.9 - July 2015 - first beta version
+### License:
+### MIT license, all text above must be included in any redistribution
+#######################
 
 DISCLAIMER:
 
@@ -65,11 +62,11 @@ Run it and change this parameters:
 All changes in Adafruit code is marked with:
 
 
-  // *** SPFD5408 change -- Begin
+  // ### SPFD5408 change -- Begin
 
   (change)
 
-  // *** SPFD5408 change -- End
+  // ### SPFD5408 change -- End
 
 
 ——————
@@ -97,6 +94,3 @@ Examples:
 
 		example of Adafruit changed to work with the SPFD5408
 
-
-
-	
