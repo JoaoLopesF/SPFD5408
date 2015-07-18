@@ -12,8 +12,8 @@ several things can happen :
 
 	- White Screen
 	- Screen with noise
-	- Touch does not work
-	- The colors are reversed
+	- Touch not works or is inverted (coordinate Y)
+	- The colors are inverted
 	- And other things
 
 After trying for several days trying the solutions I found on the web, and none works 100%.
@@ -91,8 +91,6 @@ If you download any code that uses Adafruit Libraries, please verify it:
 —- tft.begin: insert after block commented
 
     tft.begin(0x9341); // SDFP5408
-
-  // *** SPFD5408 change -- End
 
 —- Calibrate before run 
 
