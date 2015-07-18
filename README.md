@@ -1,17 +1,17 @@
 #SPFD5408 Library
 
-This library is the Adafruit TFT Libraries changed to works in TFT 2.4 shields with the SPFD5408 controler
+This library is the Adafruit TFT Libraries changed to works in TFT 2.4 shields with the SPFD5408 controller.
 
-This library is the last version of Adafruit, inclusive with buttons features.
+It is based in the last version of Adafruit, inclusive with buttons features.
 
-The TFT 2.4 is cheap TFT, that generally is form China. 
-With poor documentation, libraries e how to works
+The TFT 2.4 is cheap TFT, that generally is from China, 
+without documentation or libraries for it.
 
 When we try to use the TFT 2.4 with SPFD5408 controller in sketches with Adafruit TFT libraries,
 several things can happen :
 
 	- White Screen
-	- Screen with noise
+	- All screen with noise
 	- Touch not works or is inverted (coordinate Y)
 	- The colors are inverted
 	- And other things
