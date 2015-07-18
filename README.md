@@ -17,9 +17,12 @@ several things can happen :
 	- And other things
 
 After trying for several days trying the solutions I found on the web, and none works 100%.
-So I decided to do a specific to this controller.
-And it was easy for those who are beginning to work with TFT.
-And avoid much headache in this.
+So I decided to do an library specific to this controller.
+
+I changed the Adafruit libraries for TFT: GFX , TFTLCD and TouchScreen.
+I join all in this one library, the library SPFD5408, to avoid problems with duplicate libraries 
+and enables also have the original library Adafruit ready for use in other projects with another TFT hardware.
+ 
 
 DISCLAIMER:
 
