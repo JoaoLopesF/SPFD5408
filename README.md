@@ -154,7 +154,7 @@ Acknowledgements:
 
 	- First to Adafruit for excellent library
 	- To Andrologiciels blog (https://andrologiciels.wordpress.com/arduino/lcd/tft-display/)
-		As the first library could to show the graphics (after only blank or noised screens) 
+		As the first library could to show the graphics (before only blank or noise screen) 
 		and be the basis for any adjustments that I made in this library
 	- To Berni_ (https://forum.arduino.cc/index.php?topic=223769.15)
 		By the logic of TFT calibration for be the basis for my program
