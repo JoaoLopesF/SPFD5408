@@ -1,8 +1,8 @@
 #SPFD5408 Library
 	Author: Joao Lopes
 	Versions: 
-		0.9.0 Beta 1 - First public beta - 18/07/15
-		0.9.1 Beta 2 - Now works on Mega boards - 19/07/15
+		0.9.0 - Beta 1: First public beta - 18/07/15
+		0.9.1 - Beta 2: Now works on Mega boards - 19/07/15
 
 This library is the Adafruit TFT Libraries changed to works in TFT 2.4 shields with the SPFD5408 controller.
 
