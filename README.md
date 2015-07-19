@@ -39,6 +39,8 @@ ATTENTION:
 Due to variations in Chinese shields with some controller,
 there is no guarantee that will work for everyone.
 
+I test with success in my www.mcufriend.com TFTs, plugged in Uno and Mega Arduino boards.
+
 I’ll try a more suppliers in aliexpress to test more variations.
 
 Please let me know if this happens.
