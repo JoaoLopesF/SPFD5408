@@ -15,12 +15,26 @@
 #ifdef __AVR__
 	#include <avr/pgmspace.h>
 #endif
-#include "pins_arduino.h"
-#include "wiring_private.h"
 
 // *** SPFD5408 change -- Begin
+
 #include "SPFD5408_Adafruit_TFTLCD.h"
+
+#if defined __AVR_ATmega328P__
+#include "pin_magic_UNO.h"
+#elif defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+#include "pin_magic_MEGA.h"
+#elif defined(__AVR_ATmega32U4__)
+#error Leornardo not yet supported
+#else
+#error Invalid Board
+#endif
+
+// TODO: Complete types of board of UNO, tinys, etc.
+
 // -- End
+
+#include "wiring_private.h"
 
 #include "pin_magic.h"
 
