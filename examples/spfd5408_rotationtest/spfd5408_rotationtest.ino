@@ -4,6 +4,7 @@
 
 // Modified for SPFD5408 Library by Joao Lopes
 // and touch instead serial !!!!
+// Too much modifications, so not: begins e ends 
 
 #include <SPFD5408_Adafruit_GFX.h>    // Core graphics library
 #include <SPFD5408_Adafruit_TFTLCD.h> // Hardware-specific library
@@ -74,6 +75,8 @@ void setup(void) {
   
   tft.reset();
   tft.begin(0x9341); // SDFP5408
+
+  tft.setRotation(0); // Need for the Mega, please changed for your choice or rotation initial
 
   // Border
 

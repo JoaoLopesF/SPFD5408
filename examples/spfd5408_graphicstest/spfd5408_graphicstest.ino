@@ -46,12 +46,12 @@ Adafruit_TFTLCD tft(LCD_CS, LCD_CD, LCD_WR, LCD_RD, LCD_RESET);
 // a simpler declaration can optionally be used:
 // Adafruit_TFTLCD tft;
 
+// -- Setup
+
 void setup(void) {
+  
   Serial.begin(9600);
-  // *** SPFD5408 change -- Begin
-
-  digitalWrite(35, HIGH);         //I use this on mega for LCD Backlight
-
+  
   progmemPrintln(PSTR("TFT LCD test"));
 
 #ifdef USE_ADAFRUIT_SHIELD_PINOUT
@@ -61,9 +61,11 @@ void setup(void) {
 #endif
 
   tft.reset();
-
  
   // *** SPFD5408 change -- Begin
+
+// Original code commented
+
 //  uint16_t identifier = tft.readID();
 //
 //  if(identifier == 0x9325) {
@@ -90,7 +92,11 @@ void setup(void) {
 //
 //  tft.begin(identifier);
 
-    tft.begin(0x9341); // SDFP5408
+  // Code changed to works 
+  
+  tft.begin(0x9341); // SDFP5408
+
+  tft.setRotation(0); // Need for the Mega, please changed for your choice or rotation initial
 
   // *** SPFD5408 change -- End
 

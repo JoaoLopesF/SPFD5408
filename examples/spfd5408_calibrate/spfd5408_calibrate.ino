@@ -236,9 +236,10 @@ void loop()
 
 }
 
+// Calibration of Touch Screen (resistive)
+
 void calibrate_TS(void) {
 
-  // Calibration of Touch Screen (resistive)
   // Based in code posted in https://forum.arduino.cc/index.php?topic=223769.15
   
   TSPoint p1, p2;
@@ -314,10 +315,9 @@ void calibrate_TS(void) {
 
   waitOneTouch();
 }
+// wait 1 touch to return the point 
 
 TSPoint waitOneTouch() {
-
-  // wait 1 touch to exit function
   
   TSPoint p;
   
@@ -332,9 +332,9 @@ TSPoint waitOneTouch() {
   return p;
 }
 
-void drawBorder () {
+// Draw a border
 
-  // Draw a border
+void drawBorder () {
 
   uint16_t width = tft.width() - 1;
   uint16_t height = tft.height() - 1;
@@ -345,11 +345,10 @@ void drawBorder () {
   
 }
 
- 
+// Show a screen of calibration
+
 void showCalibration() {
-
-  // Show a screen of calibration
-
+  
   // Clear
   
   tft.fillScreen(BLACK);
@@ -380,9 +379,9 @@ void showCalibration() {
   
 }
 
-void showTouched(TSPoint p) {
+// Show the coordinates     
 
-  // Show the coordinates
+void showTouched(TSPoint p) {
 
   uint8_t w = 40; // Width
   uint8_t h = 10; // Heigth
@@ -405,9 +404,9 @@ void showTouched(TSPoint p) {
 
 }
 
-void showValue (uint16_t value) {
+// Show a value of TSPoint
 
-  // Show a value of TSPoint
+void showValue (uint16_t value) {
 
   if (value < 10)
     tft.print("00");
@@ -418,9 +417,9 @@ void showValue (uint16_t value) {
   
 }
 
-void showResults() {
+// Show results of calibration
 
-  // Show results of calibration
+void showResults() {
 
   tft.fillScreen(BLACK);
   
@@ -445,9 +444,9 @@ void showResults() {
 
 }
 
-void initializeButtons() {
+// Initialize buttons
 
-  // Initialize buttons
+void initializeButtons() {
 
   uint16_t x = 40;
   uint16_t y = height - 20;
@@ -474,10 +473,10 @@ void initializeButtons() {
   
 }
 
+// Map the coordinate X
+  
 uint16_t mapXValue(TSPoint p) {
 
-  // Map the coordinate X
-  
   uint16_t x = map(p.x, TS_MINX, TS_MAXX, 0, tft.width());
 
   //Correct offset of touch. Manual calibration
@@ -487,9 +486,9 @@ uint16_t mapXValue(TSPoint p) {
 
 }
 
-uint16_t mapYValue(TSPoint p) {
+// Map the coordinate Y
 
-  // Map the coordinate Y
+uint16_t mapYValue(TSPoint p) {
 
   uint16_t y = map(p.y, TS_MINY, TS_MAXY, 0, tft.height());
 
