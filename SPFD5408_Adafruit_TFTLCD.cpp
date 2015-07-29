@@ -34,9 +34,8 @@
 
 // -- End
 
+#include "pins_arduino.h"
 #include "wiring_private.h"
-
-#include "pin_magic.h"
 
 //#define TFTWIDTH   320
 //#define TFTHEIGHT  480
