@@ -5,6 +5,8 @@
 // MIT license
 
 // Modified for SPFD5408 by Joao Lopes to work with SPFD5408
+// Version 0.9.1 - First Beta
+//         0.9.2 - unique pin_magic por uno, leonardo and mega
 
 #if defined(__SAM3X8E__)
 	#include <include/pio.h>

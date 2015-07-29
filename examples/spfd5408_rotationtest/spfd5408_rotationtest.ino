@@ -5,6 +5,7 @@
 // Modified for SPFD5408 Library by Joao Lopes
 // and touch instead serial !!!!
 // Too much modifications, so not: begins e ends 
+// Version 0.9.2 - Rotation for Mega and screen initial
 
 #include <SPFD5408_Adafruit_GFX.h>    // Core graphics library
 #include <SPFD5408_Adafruit_TFTLCD.h> // Hardware-specific library

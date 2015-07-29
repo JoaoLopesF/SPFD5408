@@ -4,7 +4,7 @@
 //
 // Versions:
 //    - 0.9.0  First beta - July 2015
-//  
+//    - 0.9.1  Rotation for Mega 
 // Comments: 
 //    Show the calibration parameters to put in your code
 //    Please use a small like the eraser on a pencil for best results
@@ -96,7 +96,9 @@ void setup(void) {
   tft.reset();
   
   tft.begin(0x9341);
-  
+
+  tft.setRotation(0); // Need for the Mega, please changed for your choice or rotation initial
+
   width = tft.width() - 1;
   height = tft.height() - 1;
 
