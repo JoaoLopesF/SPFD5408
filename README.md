@@ -41,7 +41,7 @@ ATTENTION:
 Due to variations in Chinese shields with some controller,
 there is no guarantee that will work for everyone.
 
-I test with success in my www.mcufriend.com TFTs, plugged in Uno and Mega Arduino boards.
+I test with success in my www.mcufriend.com TFTs, plugged in Uno, Leonardo and Mega Arduino boards.
 
 I’ll try a more suppliers in aliexpress to test more variations.
 
@@ -102,6 +102,10 @@ If you download any code that uses Adafruit Libraries, please verify it:
 —- tft.begin: insert after block commented
 
     tft.begin(0x9341); // SDFP5408
+
+—- tft.rotation: Need for Mega (else screen is showed mirrored) 
+
+  tft.setRotation(0); // Need for the Mega, please changed for your choice of rotation initial
 
 —- Calibrate before run 
 
