@@ -3,6 +3,7 @@
 // DOES NOT CURRENTLY WORK ON ARDUINO LEONARDO
 
 // Modified for SPFD5408 Library by Joao Lopes
+// Version 0.9.2 - Rotation for Mega
 
 // *** SPFD5408 change -- Begin
 #include <SPFD5408_Adafruit_GFX.h>    // Core graphics library
@@ -129,10 +130,40 @@ void setup(void) {
 
   tft.begin(0x9341); // SDFP5408
 
+  tft.setRotation(0); // Need for the Mega, please changed for your choice or rotation initial
+
+  // Border
+
+  drawBorder();
+  
+  // Initial screen
+  
+  tft.setCursor (55, 50);
+  tft.setTextSize (3);
+  tft.setTextColor(RED);
+  tft.println("SPFD5408");
+  tft.setCursor (65, 85);
+  tft.println("Library");
+  tft.setCursor (55, 150);
+  tft.setTextSize (2);
+  tft.setTextColor(BLACK);
+  tft.println("TFT Paint");
+
+  tft.setCursor (80, 250);
+  tft.setTextSize (1);
+  tft.setTextColor(BLACK);
+  tft.println("Touch to proceed");
+
+  // Wait touch
+
+  waitOneTouch();
+
 // *** SPFD5408 change -- End
 
   // -- End
 
+  // Paint
+  
   tft.fillScreen(BLACK);
 
   tft.fillRect(0, 0, BOXSIZE, BOXSIZE, RED);
@@ -230,4 +261,38 @@ void loop()
     }
   }
 }
+
+// Wait one touch
+
+TSPoint waitOneTouch() {
+
+  // wait 1 touch to exit function
+  
+  TSPoint p;
+  
+  do {
+    p= ts.getPoint(); 
+  
+    pinMode(XM, OUTPUT); //Pins configures again for TFT control
+    pinMode(YP, OUTPUT);
+  
+  } while((p.z < MINPRESSURE )|| (p.z > MAXPRESSURE));
+  
+  return p;
+}
+
+
+void drawBorder () {
+
+  // Draw a border
+
+  uint16_t width = tft.width() - 1;
+  uint16_t height = tft.height() - 1;
+  uint8_t border = 10;
+
+  tft.fillScreen(RED);
+  tft.fillRect(border, border, (width - border * 2), (height - border * 2), WHITE);
+  
+}
+
 
