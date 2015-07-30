@@ -6,7 +6,7 @@
 		0.9.2 - Beta 3: Now works no Leornardo too - 29/07/15
 
 This library is the Adafruit TFT Libraries changed to works in TFT 2.4 shields with the SPFD5408 controller.
-Tested on Arduino Uno, Leonardo and Mega.
+Tested on Arduino Uno, Leonardo and Mega. See it on action in: https://www.youtube.com/watch?v=Q8WvEjXvAws
 
 It is based in the last version of Adafruit, inclusive with buttons features.
 
