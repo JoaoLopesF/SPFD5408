@@ -5,8 +5,9 @@
 
 ///////  ***** Not Tested yet on SPFD5408 - next version I do it
 
-#include <Adafruit_GFX.h>    // Core graphics library
-#include <Adafruit_TFTLCD.h> // Hardware-specific library
+#include <SPFD5408_Adafruit_GFX.h>    // Core graphics library
+#include <SPFD5408_Adafruit_TFTLCD.h> // Hardware-specific library
+#include <SPI.h>
 #include <SD.h>
 
 // The control pins for the LCD can be assigned to any digital or
@@ -30,13 +31,22 @@
 // For the Arduino Mega, use digital pins 22 through 29
 // (on the 2-row header at the end of the board).
 
+// For Arduino Mega
+//  connect the SD card with CS going to pin 53, DI going to pin 51, DO going to pin 50 and SCK going to pin 52 (standard)
+
+#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
+
+#define SD_CS 53     // Set the chip select line to whatever you use
+
+#else
+
 // For Arduino Uno/Duemilanove, etc
 //  connect the SD card with DI going to pin 11, DO going to pin 12 and SCK going to pin 13 (standard)
 //  Then pin 10 goes to CS (or whatever you have set up)
+
 #define SD_CS 10     // Set the chip select line to whatever you use (10 doesnt conflict with the library)
 
-// In the SD card, place 24 bit color BMP files (be sure they are 24-bit!)
-// There are examples in the sketch folder
+#endif
 
 // our TFT wiring
 Adafruit_TFTLCD tft(LCD_CS, LCD_CD, LCD_WR, LCD_RD, A4);
