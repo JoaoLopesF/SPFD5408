@@ -3,8 +3,6 @@
 // If using an Arduino Mega, make sure the SD library is configured for
 // 'soft' SPI in the file Sd2Card.h.
 
-///////  ***** Not Tested yet on SPFD5408 - next version I do it
-
 #include <SPFD5408_Adafruit_GFX.h>    // Core graphics library
 #include <SPFD5408_Adafruit_TFTLCD.h> // Hardware-specific library
 #include <SPI.h>

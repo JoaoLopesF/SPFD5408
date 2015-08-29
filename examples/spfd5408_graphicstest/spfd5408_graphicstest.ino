@@ -52,9 +52,9 @@ Adafruit_TFTLCD tft(LCD_CS, LCD_CD, LCD_WR, LCD_RD, LCD_RESET);
 // -- Setup
 
 void setup(void) {
-  
+
   Serial.begin(9600);
-  
+
   progmemPrintln(PSTR("TFT LCD test"));
 
 #ifdef USE_ADAFRUIT_SHIELD_PINOUT
@@ -64,7 +64,7 @@ void setup(void) {
 #endif
 
   tft.reset();
- 
+
   // *** SPFD5408 change -- Begin
 
 // Original code commented
@@ -95,8 +95,8 @@ void setup(void) {
 //
 //  tft.begin(identifier);
 
-  // Code changed to works 
-  
+  // Code changed to works
+
   tft.begin(0x9341); // SDFP5408
 
   tft.setRotation(0); // Need for the Mega, please changed for your choice or rotation initial
@@ -416,4 +416,3 @@ void progmemPrintln(const char *str) {
   progmemPrint(str);
   Serial.println();
 }
-

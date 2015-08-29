@@ -1,0 +1,6 @@
+Arduino           MEGA
+
+10 - SD_SS        53      CS
+11 - SD-D1        51      MOSI
+12 - SD_D0        50      MISO
+13 - SD_SCK       52      CLK

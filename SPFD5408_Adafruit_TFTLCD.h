@@ -16,6 +16,29 @@
 
 // *** SPFD5408 change -- Begin
 #include <SPFD5408_Adafruit_GFX.h>
+
+// Color definitions
+#define	TFTLCD_BLACK           0x0000
+#define TFTLCD_WHITE           0xFFFF
+#define	TFTLCD_BLUE            0x001F
+#define	TFTLCD_RED             0xF800
+#define	TFTLCD_GREEN           0x07E0
+#define TFTLCD_CYAN            0x07FF
+#define TFTLCD_MAGENTA         0xF81F
+#define TFTLCD_YELLOW          0xFFE0
+#define TFTLCD_ORANGE          0xFC80
+#define TFTLCD_PURPLE          0x781F
+#define TFTLCD_SIENNA          0xF811
+#define TFTLCD_NEONYELLOW      0x9FE0
+#define TFTLCD_EMERALD         0x05E5
+#define TFTLCD_BLUE3           0x03FF
+#define TFTLCD_ROYALBLUE       0x3333
+#define TFTLCD_BROWN2          0x8888
+#define TFTLCD_PINK            0xFADF
+#define TFTLCD_DKPINK          0xFCDF
+#define TFTLCD_BROWN1          0x7083
+#define TFTLCD_OLIVE           0x6BC3
+
 // -- End
 
 // **** IF USING THE LCD BREAKOUT BOARD, COMMENT OUT THIS NEXT LINE. ****
@@ -99,7 +122,7 @@ class Adafruit_TFTLCD : public Adafruit_GFX {
 					  csPinUnset,  cdPinUnset,  wrPinUnset,  rdPinUnset,
 					  _reset;
   #endif
-  
+
 #endif
 };
 
