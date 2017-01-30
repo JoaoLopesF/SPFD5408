@@ -1,6 +1,6 @@
 #SPFD5408 Library
 	Author: Joao Lopes
-	Versions: 
+	Versions:
 		0.9.0 - Beta 1: First public beta - 18/07/15
 		0.9.1 - Beta 2: Now works on Mega boards - 19/07/15
 		0.9.2 - Beta 3: Now works no Leornardo too - 29/07/15
@@ -10,7 +10,7 @@ Tested on Arduino Uno, Leonardo and Mega.
 
 It is based in the last version of Adafruit, inclusive with buttons features.
 
-The TFT 2.4 is cheap TFT, that generally is from China, 
+The TFT 2.4 is cheap TFT, that generally is from China,
 without documentation or libraries for it.
 
 When we try to use the TFT 2.4 with SPFD5408 controller in sketches with Adafruit TFT libraries,
@@ -26,9 +26,9 @@ After trying for several days trying the solutions I found on the web, and none 
 So I decided to do an library specific to this controller.
 
 I changed the Adafruit libraries for TFT: GFX , TFTLCD and TouchScreen.
-I join all in this one library, the library SPFD5408, to avoid problems with duplicate libraries 
+I join all in this one library, the library SPFD5408, to avoid problems with duplicate libraries
 and enables also have the original library Adafruit ready for use in other projects with another TFT hardware.
- 
+
 
 DISCLAIMER:
 
@@ -36,24 +36,25 @@ This Library is NOT provided by AdaFruit and they have not
 endorsed it. This library is just a lot of modifications in the Adafruit Library,
 to works in TFT with SPFD5408 controller (cheap shields)
 
-ATTENTION: 
+ATTENTION:
 
 Due to variations in Chinese shields with some controller,
 there is no guarantee that will work for everyone.
 
 I test with success in my www.mcufriend.com TFTs, plugged in Uno and Mega Arduino boards.
 
-I’ll try a more suppliers in aliexpress to test more variations.
+THIS LIBRARY IS ONLY FOR SPFD5408 controller.
 
-Please let me know if this happens.
+If the white screen persists, can indicate than your TFT is not SPFD5408.
+Please access this site, to help you identify the controller and library for this TFT:
 
-Also please send me feedback, problems or suggestions.
+http://misc.ws/2015/01/24/lcd-touch-screen-information/
 
 INSTALATION:
 
-To download. click the DOWNLOADS button in the top right corner, rename the uncompressed folder to SPFD5408. 
+To download. click the DOWNLOADS button in the top right corner, rename the uncompressed folder to SPFD5408.
 
-Place the SPFD5408 library folder your <arduinosketchfolder>/libraries/ folder. 
+Place the SPFD5408 library folder your <arduinosketchfolder>/libraries/ folder.
 You may need to create the libraries subfolder if its your first library.
 
 Or more simple, you access the Arduinos’s IDE menu : sketch/add library
@@ -103,7 +104,7 @@ If you download any code that uses Adafruit Libraries, please verify it:
 
     tft.begin(0x9341); // SDFP5408
 
-—- Calibrate before run 
+—- Calibrate before run
 
 	Exists one sketch written for my, to help in calibration of touch
 	See it in examples folder
@@ -113,7 +114,7 @@ If you download any code that uses Adafruit Libraries, please verify it:
 	#define TS_MINY 120
 	#define TS_MAXX 920
 	#define TS_MAXY 940
-	
+
 	(please verify it if the point of touch is not accurate)
 
 ————————
@@ -128,7 +129,7 @@ All changes in Adafruit code is marked with:
   // ### SPFD5408 change -- End
 
   This is useful if You see the points that be workeds for any touble
-  
+
 ——————
 
 Examples:
@@ -137,7 +138,7 @@ Examples:
 
 		From Adafruit Libraries — Not works with the SPFD5408
 
-	
+
 	spfd5408_calibrate
 
 		Help the calibration of touch (resistive)
@@ -158,9 +159,7 @@ Acknowledgements:
 
 	- First to Adafruit for excellent library
 	- To Andrologiciels blog (https://andrologiciels.wordpress.com/arduino/lcd/tft-display/)
-		As the first library could to show the graphics (before only blank or noise screen) 
+		As the first library could to show the graphics (before only blank or noise screen)
 		and be the basis for any adjustments that I made in this library
 	- To Berni_ (https://forum.arduino.cc/index.php?topic=223769.15)
 		By the logic of TFT calibration for be the basis for my program
-
-
