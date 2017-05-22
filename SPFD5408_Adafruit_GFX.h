@@ -60,8 +60,11 @@ class Adafruit_GFX : public Print {
     setTextSize(uint8_t s),
     setTextWrap(boolean w),
     setRotation(uint8_t r),
-    cp437(boolean x=true);
-
+    cp437(boolean x=true),
+	// *** Mark42XLII change - begin
+	setTextWrapBorder(uint16_t size);
+	// *** Mark42XLII change - end
+	
 #if ARDUINO >= 100
   virtual size_t write(uint8_t);
 #else
@@ -84,6 +87,9 @@ class Adafruit_GFX : public Print {
     _width, _height, // Display w/h as modified by current rotation
     cursor_x, cursor_y;
   uint16_t
+	// *** Mark42XLII change - begin
+  	wrapBorder,
+	// *** Mark42XLII change - end
     textcolor, textbgcolor;
   uint8_t
     textsize,
