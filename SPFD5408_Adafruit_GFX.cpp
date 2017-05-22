@@ -59,6 +59,9 @@ Adafruit_GFX::Adafruit_GFX(int16_t w, int16_t h):
   cursor_y  = cursor_x    = 0;
   textsize  = 1;
   textcolor = textbgcolor = 0xFFFF;
+  // *** Mark42XLII change - begin
+  wrapBorder = 0;
+  // *** Mark42XLII change - end
   wrap      = true;
   _cp437    = false;
 }
@@ -430,7 +433,9 @@ void Adafruit_GFX::write(uint8_t c) {
     cursor_x += textsize*6;
     if (wrap && (cursor_x > (_width - textsize*6))) {
       cursor_y += textsize*8;
-      cursor_x = 0;
+	  // *** Mark42XLII change - begin
+      cursor_x = wrapBorder;
+	  // *** Mark42XLII change - end
     }
   }
 #if ARDUINO >= 100
@@ -506,6 +511,12 @@ void Adafruit_GFX::setTextColor(uint16_t c, uint16_t b) {
 void Adafruit_GFX::setTextWrap(boolean w) {
   wrap = w;
 }
+
+// Kedei LCD change - begin
+void Adafruit_GFX::setTextWrapBorder(uint16_t size){
+	wrapBorder = size;
+}
+//Kedei LCD change - end
 
 uint8_t Adafruit_GFX::getRotation(void) const {
   return rotation;
