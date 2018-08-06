@@ -6,7 +6,7 @@
 		0.9.2 - Beta 3: Now works no Leornardo too - 29/07/15
 
 This library is the Adafruit TFT Libraries changed to works in TFT 2.4 shields with the SPFD5408 controller.
-Tested on Arduino Uno, Leonardo and Mega.
+Tested on Arduino Uno, Leonardo and Mega. See it on action in: https://www.youtube.com/watch?v=Q8WvEjXvAws
 
 It is based in the last version of Adafruit, inclusive with buttons features.
 
@@ -50,7 +50,7 @@ ATTENTION:
 Due to variations in Chinese shields with some controller,
 there is no guarantee that will work for everyone.
 
-I test with success in my www.mcufriend.com TFTs, plugged in Uno and Mega Arduino boards.
+I test with success in my www.mcufriend.com TFTs, plugged in Uno, Leonardo and Mega Arduino boards.
 
 THIS LIBRARY IS ONLY FOR SPFD5408 controller.
 
@@ -113,7 +113,15 @@ If you download any code that uses Adafruit Libraries, please verify it:
 
     tft.begin(0x9341); // SDFP5408
 
+<<<<<<< HEAD
 —- Calibrate before run
+=======
+—- tft.rotation: Need for Mega (else screen is showed mirrored) 
+
+  tft.setRotation(0); // Need for the Mega, please changed for your choice of rotation initial
+
+—- Calibrate before run 
+>>>>>>> origin/master
 
 	Exists one sketch written for my, to help in calibration of touch
 	See it in examples folder
