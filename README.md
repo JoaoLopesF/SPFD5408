@@ -32,9 +32,8 @@ and enables also have the original library Adafruit ready for use in other proje
 
 # ATTENTION: DISCONTINUED
 
-This library is discontinued,
-because only works if the controller is SPFD5408.
-The tft 2.4 Chinese are coming with other controllers and not works more with this library.
+Sorry, this library is discontinued, due now few chinesse TFT is SPFD5402, so few TFT is works with it.
+I now use the Nextion Display instead this TFT
 
 Tip: I am now using Nextion display (https://nextion.itead.cc/), 
 with many advantages like: 4 wires only for connection with the microcontroller, graphic editor on PC, etc.
