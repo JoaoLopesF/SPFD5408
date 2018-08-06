@@ -1,4 +1,4 @@
-#SPFD5408 Library
+# SPFD5408 Library
 	Author: Joao Lopes
 	Versions:
 		0.9.0 - Beta 1: First public beta - 18/07/15
@@ -29,7 +29,7 @@ I changed the Adafruit libraries for TFT: GFX , TFTLCD and TouchScreen.
 I join all in this one library, the library SPFD5408, to avoid problems with duplicate libraries
 and enables also have the original library Adafruit ready for use in other projects with another TFT hardware.
 
-#ATTENTION: DISCONTINUED
+# ATTENTION: DISCONTINUED
 
 This library is discontinued,
 because only works if the controller is SPFD5408.
