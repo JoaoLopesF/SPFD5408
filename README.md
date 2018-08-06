@@ -29,6 +29,15 @@ I changed the Adafruit libraries for TFT: GFX , TFTLCD and TouchScreen.
 I join all in this one library, the library SPFD5408, to avoid problems with duplicate libraries
 and enables also have the original library Adafruit ready for use in other projects with another TFT hardware.
 
+#ATTENTION: DISCONTINUED
+
+This library is discontinued,
+because only works if the controller is SPFD5408.
+The tft 2.4 Chinese are coming with other controllers and not works more with this library.
+
+Tip: I am now using Nextion display (https://nextion.itead.cc/), 
+with many advantages like: 4 wires only for connection with the microcontroller, graphic editor on PC, etc.
+
 
 DISCLAIMER:
 
