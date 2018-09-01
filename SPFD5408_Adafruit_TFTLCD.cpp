@@ -305,9 +305,10 @@ void Adafruit_TFTLCD::begin(uint16_t id) {
     writeRegister8(ILI9341_DISPLAYON, 0);
     delay(500);
 	// *** SPFD5408 change -- Begin
-	// Not tested yet
-	//writeRegister8(ILI9341_INVERTOFF, 0);
-	//delay(500);
+	// Inverted colors
+	// Source : http://www.avrfreaks.net/comment/1711751#comment-1711751
+	writeRegister8(ILI9341_INVERTON, 0x00);
+	delay(500);
     // *** SPFD5408 change -- End
     setAddrWindow(0, 0, TFTWIDTH-1, TFTHEIGHT-1);
     return;
